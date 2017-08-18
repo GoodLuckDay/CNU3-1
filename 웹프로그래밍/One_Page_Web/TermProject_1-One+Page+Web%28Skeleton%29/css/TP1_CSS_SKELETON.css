@@ -1,0 +1,395 @@
+/* Menu bar Start ------------------------------------*/
+div.Bar {
+    overflow-y: auto;
+    transition: visibility 0s
+    border: 1px solid #ccc;
+    background-color: #333;
+}
+div.Bar button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    width: auto;
+    padding: 5px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    margin-left:2%;
+    margin-right: 70px;
+    margin-top : 15px;
+    cursor: pointer;
+    position: relative;
+}
+.container {
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 10px
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+div.Bar button a{
+  color: #fff;
+  text-decoration: none;
+}
+div.Bar button:hover{
+  background-color: #3e8e41;
+}
+#Menu_imgae{
+  padding-top: 0px;
+  margin-top:0px;
+  position: relative;
+}
+#dropDownUL{
+  text-align: left;
+  background-color: inherit;
+  margin-bottom: 10px;
+}
+#dropDownUL li{
+  color: inherit;
+}
+/*Menu_bar END-----------------------*/
+/*SLIDE_SHOW START-----------------------*/
+.slidePicture{
+  display: block;
+  width: 100%;
+  height: 384px;
+
+}
+.left_slide_button, .right_slide_button{
+  bottom: 180px;
+  cursor: pointer;
+  z-index: 1px;
+  position: absolute;
+
+}
+.left_slide_button img, .right_slide_button img{
+  height: 55px;
+  width: 55px;
+}
+
+.left_slide_button{
+
+}
+.right_slide_button{
+  right : 20%;
+}
+.hover-circle{
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  z-index: 1px;
+  cursor: pointer;
+  opacity: .7;
+  background: gray;
+  border:#000 1px solid;
+  border-radius: 100%;
+  display: inline;
+}
+.w3-white{
+  color:#000!important;background-color:#fff!important
+}
+.circles{
+  position: relative;
+  width: 0%;
+  top: -5%;
+  left: 43%;
+}
+.product_list{
+  overflow: hidden;
+  position: relative;
+  width: 90%;
+  height : 340px;
+  margin-top: 0px;
+  left: 5%;
+  top: 20px;
+}
+.product_list li{
+  position: absolute;
+  left:0px;
+}
+.product_list li:nth-child(1){
+  left:0px
+}
+.product_list li:nth-child(2){
+  left:200px
+}
+.product_list li:nth-child(3){
+  left:200px
+}
+.product_list li:nth-child(4){
+  left:200px
+}
+.product_list li:nth-child(5){
+  left:200px
+}
+.product_list li:nth-child(1) img{
+  left:-200px
+}
+.product_list li:nth-child(3) img{
+  left:200px
+}
+.product_list li:nth-child(4) img{
+  left:200px
+}
+.product_list li:nth-child(5) img{
+  left:200px
+}
+/*IMAGESLIDE END-----------------------*/
+/*Introduce Start----------------------*/
+.Intro{
+  border-collapse: collapse;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+  width: 60%;
+  max-height: 300px;
+  margin: auto;
+  text-align: center;
+}
+.Intro td,.Intro th{
+  border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+.Intro tbody td{
+  height: 400px;
+}
+.explanation h3{
+  color:red;
+}
+.explanation p{
+  font-size: 14px;
+}
+.explanation p span:nth-child(1){
+  font-style: normal;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration:underline;
+}
+.explanation p span:nth-child(2){
+  font-size: 16px;
+  font-weight: bolder;
+  color : blue;
+}
+
+#myChart{
+  max-width: 100%;
+  height: auto;
+  margin: 5px 0;
+}
+/*Introduce End------------------------*/
+/* Main Start */
+div.ImageSlide, div.Gallery {
+	background-color : #ffffcc;
+	outline : none;
+	width : 100%;
+	height : 384px;
+  position: relative;
+}
+div.Introduce, div.Guestbook {
+	background-color : #ccffff;
+	outline : none;
+	width : 100%;
+	height : auto;
+  position: relative;
+}
+div.Guestbook{
+  height:auto;
+  float: right;
+}
+/*GALLERY START-----------------------*/
+.X_images{
+  position: absolute;
+  cursor: pointer;
+  left:0%;
+  top: 0%;
+}
+.column{
+  float:left;
+  width: 25%;
+  height: 384px;
+  position: relative;
+  display: none;
+}
+.hover-shadow{
+  width: 98%;
+  height: 384px;
+}
+.modal{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height:100%;
+  overflow: auto;
+  background-color: black;
+}
+.modal-content{
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 70%;
+  max-width: 1200px;
+
+
+}
+.close{
+  color : white;
+  position: absolute;
+  top:10px;
+  right:25px;
+  font-size:35px;
+  font-weight: bold;
+}
+.close:hover,.close:focus{
+  color:#999;
+  text-decoration: none;
+  cursor:pointer;
+}
+
+.mySlides{
+  display: none;
+}
+.prev,.next{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  position: fixed;
+  user-select: none;
+  -webkit-user-select: none;
+  z-index: 1px;
+}
+.prev{
+  left:10%;
+}
+.next {
+  right: 10%;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+img.hover-shadow {
+  transition: 0.3s
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+.caption-container{
+  position: absolute;
+  top : 40%;
+  left : 50%;
+  transform: translate(-50%,0);
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color : white;
+  width: 150px;
+  display: none;
+}
+/*GALLERY END-----------------------*/
+/* Main End */
+/*Guestbook Start------------------*/
+.inputTable{
+  margin-top: 60px;
+  border: 1px solid black;
+  text-align: center;
+}
+#commentTable{
+  text-align: center;
+  width: 55%;
+  height : auto;
+  border-collapse: collapse;
+}
+.inputTable button{
+  color: red;
+  position: relative;
+  left: 650%;
+
+}
+.commentVal{
+  width: 70%;
+  background-color: white;
+  border-right: 1px solid black;
+}
+.commentCol{
+  border:1px solid black;
+  background-color:#ccffff;
+  height: 60px;
+}
+.commentAns{
+  border:1px solid black;
+  background-color: gray;
+}
+.commentReg button{
+   cursor:pointer;
+   border-left: none;
+}
+.commentReg{
+  text-align: right;
+}
+.openGraph{
+  width: 100%;
+}
+.openGraphIcon{
+  width: 100%;
+}
+.openGraphContent{
+  background-color: white;
+  width: 50%;
+  height: auto;
+}
+/* Footer Start */
+footer {
+    display: block;
+    border: 1px solid #ccc;
+    background-color: #333;
+}
+.footerDiv{
+  text-align: center;
+}
+.footerDiv p{
+    color: #fff;
+}
+/* Footer End */

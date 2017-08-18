@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TP1 in HTML5 Skeleton</title>
+<!-- CSS, JS External 정의 -->
+<link rel="stylesheet" type="text/css" href="./css/TP1_CSS_SKELETON.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/menubar.js"></script>
+<script type="text/javascript" src="js/ImageSlide.js"></script>
+<script type="text/javascript" src="js/GuestBook.js"></script>
+</head>
+<body>
+	<!-- 레이아웃은 HTML5 엘리먼트를 사용할 것 -->
+	<header>
+		<!-- Header (Menu bar) -->
+		<div class="Bar">
+			<button class="Menu"><a href="file:///C:/Users/com/Desktop/%EC%9B%B9%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/TermProject_1-One+Page+Web%2528Skeleton%2529/TP1_HTML_SKELETON.html#Introduce">HOME</a></button>
+			<button class="Menu"><a href="#ImageSlide">IMAGE SLIDE</a></button>
+			<button class="Menu"><a href="#Introduce">INTRODUCE</a></button>
+			<button class="Menu"><a href="#Gallery">GALLERY</a></button>
+			<button class="Menu"><a href="#Guestbook">GUEST BOOK</a></button>
+			<button id="Menu_imgae" type="button" data-togle="dropdown">
+				<div class="container">
+  				<div class="bar1"></div>
+  				<div class="bar2"></div>
+  				<div class="bar3"></div>
+				</div>
+				<ul id = "dropDownUL">
+						<li><a href="file:///C:/Users/com/Desktop/%EC%9B%B9%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/TermProject_1-One+Page+Web%2528Skeleton%2529/TP1_HTML_SKELETON.html#Introduce">HOME</a></li>
+						<li><a href="#ImageSlide">INTRODUCE</a></li>
+						<li><a href="#Introduce">GALLERY</a></li>
+						<li><a href="#Gallery">GUESTBOOK</a></li>
+						<li><a href="#Guestbook">GALLERY</a></li>
+				</ul>
+			</button>
+		</div>
+	</header>
+
+	<main>
+		<div class = "ImageSlide" id = "ImageSlide" >
+			<div class="cycle-slideshow">
+			<ul class="product_list">
+				<li>
+				<img class = "slidePicture" src="img/slide/Image1.jpg" style="width:100%">
+				</li>
+				<li>
+				<img class = "slidePicture" src="img/slide/Image2.jpg" style="width:100%">
+				</li>
+				<li>
+				<img class = "slidePicture" src="img/slide/Image3.jpg" style="width:100%">
+				</li>
+				<li>
+				<img class = "slidePicture" src="img/slide/Image4.jpg" style="width:100%">
+				</li>
+				<li>
+				<img class = "slidePicture" src="img/slide/Image5.jpg" style="width:100%">
+				</li>
+			</ul>
+			</div>
+			<div class="circles">
+				<div class="hover-circle"  style="left:30px"></div>
+				<div class="hover-circle"  style="left:50px"></div>
+				<div class="hover-circle"  style="left:70px"></div>
+				<div class="hover-circle"  style="left:90px"></div>
+				<div class="hover-circle"  style="left:110px"></div>
+			</div>
+			<span class="left_slide_button">
+				<img src="img/slide_button/left.gif">
+			</span>
+			<span class="right_slide_button">
+				<img src="img/slide_button/right.gif">
+			</span>
+		</div>
+		<div class = "Introduce" id = "Introduce">
+			<table class="Intro">
+				<thead>
+					<th colspan="2">
+					<h1>외국 가수 내한 공연</h1>
+					</th>
+				</thead>
+					<tr>
+						<td><h3>월 별 내한 공연 일 수</h3><canvas id="myChart"></canvas></td>
+						<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js"></script>
+						<script type="text/javascript" src="js/Charts.js"></script>
+						<td class="explanation" style="width:50%;"><h3><strong>전설들이 몰려온다!!! 2017 내한 팝스타<br></strong></h3><p>작년에 이어 올해도 세계적인 팝스타들의 내한 소식이 줄줄이 들려오고 있다! 세계적인 가수들이 한국에서 콘서트를
+								한다고 하면 평생에 한번 볼까말까 한 기회이기 때문에 사람들의 관심들이 엄청나다. 이미 유명한 가수들의 내한 공연 일정이 잡혀져있다. <span>일렉트로 팝의 대세 ‘투 도어 시네마클럽(Two Door Cinema Club)’,
+								세기말의 감성이 느껴지는 메탈리카의 공연! ,기타의 신 '제프 벡(Jeff Beck)', 80년대 대표 하드락 밴드 '저니(Journey)'</span>등 해외 유명 가수들의 콘서트에 참가하여 <span>Soul</span>을 느껴보자!</p></td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="2"></td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+		<div class = "Gallery" id = "Gallery">
+			<div class="column">
+				<img src="img/modal_button/x.PNG" class ="X_images" onclick="deleteSlide(1)">
+				<img src="img/gallery/pop1.jpg" class="hover-shadow cursor" onmouseover="showInfo(1)" onmouseout="hideInfo(1)" onclick="openModal(); currentSlide(1)">
+			<div class="caption-container">
+				<p id ="caption1">‘투 도어 시네마클럽(Two Door Cinema Club)’ 내한공연</p>
+			</div>
+			</div>
+			<div class="column">
+				<img src="img/modal_button/x.PNG" class ="X_images" onclick="deleteSlide(2)">
+				<img src="img/gallery/pop2.jpg" class="hover-shadow cursor"onmouseover="showInfo(2)" onmouseout="hideInfo(2)" onclick="openModal(); currentSlide(2)">
+				<div class="caption-container">
+					<p id ="caption2"> ‘메탈리카(Metallica)’ 내한공연</p>
+				</div>
+			</div>
+			<div class="column">
+				<img src="img/modal_button/x.PNG" class ="X_images" onclick="deleteSlide(3)">
+				<img src="img/gallery/pop3.jpg" class="hover-shadow cursor" onmouseover="showInfo(3)" onmouseout="hideInfo(3)"onclick="openModal(); currentSlide(3)">
+				<div class="caption-container">
+					<p id ="caption2">‘제프 벡(Jeff Beck)’ 내한공연</p>
+				</div>
+			</div>
+			<div class="column">
+				<img src="img/modal_button/x.PNG" class ="X_images" onclick="deleteSlide(4)">
+				<img src="img/gallery/pop4.jpg" class="hover-shadow cursor" onmouseover="showInfo(4)" onmouseout="hideInfo(4)"onclick="openModal(); currentSlide(4)">
+				<div class="caption-container">
+					<p id ="caption2">정예 타우렌 족장들</p>
+				</div>
+			</div>
+
+			<div id = "myModal" class="modal" >
+				<span class="close cursor" onclick="closeModal()">&times;</span>
+				<div class="modal-content">
+					<div class="mySlides" onclick="closeModal()">
+						<div class="numbertext"> 1 / 4 </div>
+						<img class ="gallery_picture"src="img/gallery/pop1.jpg" style="width:100%">
+					</div>
+					<div class="mySlides" onclick="closeModal()">
+						<div class="numbertext"> 2 / 4 </div>
+						<img class ="gallery_picture" src="img/gallery/pop2.jpg" style="width:100%">
+					</div>
+					<div class="mySlides" onclick="closeModal()">
+						<div class="numbertext"> 3 / 4 </div>
+						<img class ="gallery_picture" src="img/gallery/pop3.jpg" style="width:100%">
+					</div>
+					<div class="mySlides" onclick="closeModal()">
+						<div class="numbertext"> 4 / 4 </div>
+						<img class ="gallery_picture" src="img/gallery/pop4.jpg" style="width:100%">
+					</div>
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				</div>
+			</div>
+		</div>
+		<div class = "Guestbook" id = "Guestbook">
+			<table id="commentTable"></table>
+			<table class = "inputTable">
+				<thead><th>GuestBook</th></thead>
+				<tbody>
+				<tr style="border:1px solid black">
+					<td style="border:1px solid black">작성자</td>
+					<td style="border:1px solid black"><textarea class = "commentName" rows="4" cols="80"></textarea></td>
+				</tr>
+				<tr style="border:1px solid black">
+					<td style="border:1px solid black">내용</td>
+					<td style="border:1px solid black"><textarea class="commentText" rows="4" cols="80"></textarea></td>
+				</tr>
+				<tr style="border:1px solid black">
+					<td>
+						<button type="button" class = "commentSubmit"name="button">등록하기</button>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	<script type ="text/javascript" src="js/Gallery.js"></script>
+	</main>
+	<footer>
+		<div class="footerDiv">
+			<p>posted by Chungnam University, 201302482, Yunsu Jung, </p>
+		</div>
+	</footer>
+
+</body>
+
+</html>

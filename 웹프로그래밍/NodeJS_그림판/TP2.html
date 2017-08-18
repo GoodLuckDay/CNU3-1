@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link href="css/TP2.css" type="text/css" rel="stylesheet"><!--css파일 사용을 하기 위해 선언-->
+<script src="//code.jquery.com/jquery.min.js" type="text/javascript"></script><!--Jqery를 사용하기 위해 CDN선언-->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Paint Board</title>
+</head>
+<body>
+<h1>Paint Board</h1>
+<div>
+	<div id="canvasContainer"><!--canvas를 담기 위해서 만든 Div-->
+		<canvas id="myCanvas" width = "600" height = "600"></canvas><!--그림을 그릴수 있는 canvas-->
+		<div id="colorContainer"><!--색깔을 입력하기 위한 Input태그를 담기위한 Div-->
+			<input type="color" id="colors" value="#000000"/><!--자신이 원하는 색깔을 선택을 할수 있는 input태그-->
+			<button id="clearButton"> Clear </button><!--canvas를 초기화 시켜주는 버튼-->
+		</div>
+	</div>
+	<div id="chatting_box">
+		<textarea name="name" rows="20" cols="80" id="chat-content" readonly></textarea><br>
+		<input type="text" name="name" id="name" readonly><input type="text" name="content" id="content"value="">
+		<input type="button" name="tranButton" id="tranButton" value="chatting">
+	</div>
+	<div id = "container"><!--그림을 그리기 위해서 필요한 도구들을 모아두는 DIV-->
+		<div id="toolBox">
+			<div class="content" id="poly" onclick="changeMode(0)">선 펜</div><!--클릭시 canvas에 직접 마우스를 이용을 하여서 그림 그리기 가능-->
+			<div class="content" id="line" onclick="changeMode(1)">선 분</div><!--클릭시 canvas에 자신이 원하는 일직선인 직선을 만든다.-->
+			<div class="content" id="circle" onclick="changeMode(2)">원</div><!--클릭시 canvas에 원하는 크기의 원을 만든다.-->
+			<div class="content" id="rect" onclick="changeMode(3)">사각형</div><!--클릭시 canvas에 원하는 크기의 사각형을 만든다.-->
+			<div class="content" id="curve" onclick="changeMode(4)">지우개</div><!--클릭시 canvas에 직접 마우스로 자신이 원하는 부분 삭제 가능-->
+			<div class="content" id="fill">색채우기</div><!--자신이 선택 한 색깔로 canvas를 채울수 있다.-->
+		</div>
+	</div>
+	<div id="lineBox"><!--선 펜과 선 분을 그릴 때 선의 두께를 정한다.-->
+				<div class="lines">선 굵기</div>
+				<div class="lines" onclick="changeWidth(1)">
+					<div id="line1" ></div></div><!--가장 얇은 두께의 선-->
+				<div class="lines" onclick="changeWidth(3)"><div id="line2"></div></div><!--중간 두께의 선-->
+				<div class="lines" onclick="changeWidth(5)"><div id="line3"></div></div><!--두꺼운 두께의 선-->
+				<button id="save">저장하기</button><!--canvas에 그려진 그림을 자신의 local에 저장을 할수 있다.-->
+	</div>
+</div>
+<script src="./socket.io/socket.io.js"></script><!--socketIO를 사용하기 위해서 선언-->
+<script type="text/javascript" src="javascript/Term2.js"></script><!--외부 javascript 파일을 선언-->
+</body>
+</html>

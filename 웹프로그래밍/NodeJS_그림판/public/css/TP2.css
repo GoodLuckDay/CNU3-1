@@ -1,0 +1,100 @@
+h1{
+	text-align: center;
+	font-size: 40px;
+	margin-top:0px;
+	margin-bottom: 30px;
+}
+#canvasContainer{
+	margin-left:7%;
+	display:inline-block;
+}
+#myCanvas{
+	border : 3px solid black;
+}
+#colorContainer{
+	margin-left:3%;
+	margin-top:2%;
+}
+.colors{
+	display : inline-block;
+	border : 1px solid black;
+	cursor:pointer;
+	width : 20px;
+	height : 20px;
+	margin-right : 3%;
+}
+#clearButton{
+	margin-top:0px;
+	width:10%;
+	height:35px;
+}
+#chatting_box{
+	margin-right: 13%;
+	float:right;
+}
+#name, #tranButton{
+	width:15%;
+}
+#content{
+	width: 65%;
+}
+#container{
+	position: relative;
+	left : 60%;
+	margin-top: -20%;
+	margin-right: 13%;
+	text-align: right;
+}
+#toolBox{
+	border : 1px solid black;
+	width: 400px;
+	height: 318px;
+	overflow: hidden;
+}
+.content{
+	border:1.5px dashed blue;
+	text-align: center;
+	height:50px;
+	background-color: rgb(202, 202, 202);
+	cursor:pointer;
+}
+#lineBox{
+	position: absolute;
+	right: 0%;
+	top : 20%;
+	text-align: center;
+	width: 200px;
+	font-size: 22px;
+}
+.lines{
+	border: 1px solid black;
+	height:40px;
+	cursor:pointer;
+}
+#line1{
+	margin-top:20px;
+	margin-left:25%;
+	width:100px;
+	border-top:1px solid black;
+}
+#line2{
+	margin-top:20px;
+	margin-left:25%;
+	width:100px;
+	height:1px;
+	border-top:2px solid black;
+}
+#line3{
+	margin-top:20px;
+	margin-left:25%;
+	width:100px;
+	height:5px;
+	border-top:4px solid black;
+}
+#save{
+	margin-right:2%;
+}
+button{
+	margin-top:2%;
+	cursor: pointer;
+}
